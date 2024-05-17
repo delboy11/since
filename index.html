@@ -57,42 +57,46 @@
         var total=d.getHours()*3600+d.getMinutes()*60+d.getSeconds()
         
         var remain = 155;
-        
-        var iwPositioncontent =[
+        var a1_2 = 47;
+        var a2_3 = 49;
+        var a3_4 = 40;
+        var a4_1 = 38;
+         
+        var iwPositioncontent [
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="width:200px; height:40px;">1번 남은시간: </div></font>'+(250-(total-15)%250)
+                    content: '<font size = 5><div style="width:200px; height:40px;">1번 남은시간: </div></font>'+(225-(total-remain)%250)
                     
                 },
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+(40-(total-remain)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+(25-(total-remain)%250)
                     
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">2번 남은시간</font></div>'+((total-155)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">2번 남은시간</font></div>'+((total-remain)%250)
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">2번 바뀌었습니다. </font></div>'+((total-155)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">2번 바뀌었습니다. </font></div>'+((total-remain)%250)
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">3번 남은시간</font></div>'+((total-155)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">3번 남은시간</font></div>'+((total-remain)%250)
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">3번 바뀌었습니다. </font></div>'+((total-15)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">3번 바뀌었습니다. </font></div>'+((total-remain)%250)
                 },
                 
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">4번 남은시간</font></div>'+((total-15)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">4번 남은시간</font></div>'+((total-remain)%250)
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">4번 바뀌었습니다. </font></div>'+((total-15)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">4번 바뀌었습니다. </font></div>'+((total-remain)%250)
                 }
         ]; 
         
