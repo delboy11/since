@@ -65,45 +65,45 @@
         var iwPositioncontent = [
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="width:200px; height:40px;">1번 남은시간: </div></font>'+(250-a1_2-(total-remain)%250)
+                    content: '<font size = 5><div style="width:200px; height:40px;">1번 남은시간: </div></font>'+(170-a1_2-(total-remain)%170)
                     
                 },
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+(a1_2-(total-remain)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+(a1_2-(total-remain)%170)
                     
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">2번 남은시간</font></div>'+(250-(a1_2+a2_3)+(total-155)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">2번 남은시간</font></div>'+(170-(a1_2+a2_3)+(total-155)%170)
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">2번 바뀌었습니다. </font></div>'+(a1_2+a2_3-(total-155)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">2번 바뀌었습니다. </font></div>'+(a1_2+a2_3-(total-155)%170)
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">3번 남은시간</font></div>'+(250-(a1_2+a2_3+a3_4)+(total-155)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">3번 남은시간</font></div>'+(170-(a1_2+a2_3+a3_4)+(total-155)%170)
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">3번 바뀌었습니다. </font></div>'+(a1_2+a2_3+a3_4-(total-155)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">3번 바뀌었습니다. </font></div>'+(a1_2+a2_3+a3_4-(total-155)%170)
                 },
                 
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">4번 남은시간</font></div>'+(250-(total-155)%250)
+                    content: '<font size = 5><div style=" width:200px; height:40px;">4번 남은시간</font></div>'+(170-(total-155)%170)
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">4번 바뀌었습니다. </font></div>'+((total-155)%250)
+                    content: '<font size = 5><div style="background-color:red; width:200px; height:40px;">4번 바뀌었습니다. </font></div>'+((total-155)%170)
                 }
         ]; 
         
 
         // 인포윈도우를 생성합니다
         var i=0;
-        if(0 < (total-remain)%250 && (total-remain)%250 < a1_2){i=1;}
+        if(0 < (total-remain)%170 && (total-remain)%170 < a1_2){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -111,7 +111,7 @@
             });
         infowindow.open(map);
         var i=2;
-        if(a1_2 < (total-remain)%250 && (total-remain)%250 < a1_2+a2_3){i=3;}
+        if(a1_2 < (total-remain)%170 && (total-remain)%170 < a1_2+a2_3){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -119,7 +119,7 @@
             });
         infowindow.open(map);
         var i=4;
-        if(a1_2+a2_3 < (total-remain)%250  && (total-remain)%250 < a1_2+a2_3+a3_4){i=5;}
+        if(a1_2+a2_3 < (total-remain)%170  && (total-remain)%170 < a1_2+a2_3+a3_4){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -127,7 +127,7 @@
             });
         infowindow.open(map);
         var i=6;
-        if(a1_2+a2_3+a3_4 <(total-remain)%250 && (total-remain)%250 < 250){i=7;}
+        if(a1_2+a2_3+a3_4 <(total-remain)%170 && (total-remain)%170 < 170){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
