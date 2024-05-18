@@ -117,7 +117,7 @@
 
         // 인포윈도우를 생성합니다
         var i=0;
-        if(0 < (total-remain)%170 && (total-remain)%170 <= getPlus(1,A)){i=1;}
+        if(0 <= (total-remain)%170 && (total-remain)%170 <= getPlus(1,A)){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -125,7 +125,7 @@
             });
         infowindow.open(map);
         var i=2;
-        if(getPlus(2,A) < (total-remain)%170 && (total-remain)%170 <= getPlus(3,A)){i=3;}
+        if(getPlus(2,A) <= (total-remain)%170 && (total-remain)%170 <= getPlus(3,A)){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -133,7 +133,7 @@
             });
         infowindow.open(map);
         var i=4;
-        if(getPlus(4,A) < (total-remain)%170  && (total-remain)%170 <= getPlus(5,A)){i=5;}
+        if(getPlus(4,A) <= (total-remain)%170  && (total-remain)%170 <= getPlus(5,A)){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -141,7 +141,7 @@
             });
         infowindow.open(map);
         var i=6;
-        if(getPlus(6,A) < (total-remain)%170 && (total-remain)%170 <= getPlus(7,A)){i=7;}
+        if(getPlus(6,A) <= (total-remain)%170 && (total-remain)%170 <= getPlus(7,A)){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
