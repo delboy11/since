@@ -103,7 +103,7 @@
 
         // 인포윈도우를 생성합니다
         var i=0;
-        if(0 < (total-15)%250 < a1_2){i=1;}
+        if(0 < (total-remain)%250 < a1_2){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -111,7 +111,7 @@
             });
         infowindow.open(map);
         var i=2;
-        if(a1_2 < (total-15)%250 < a1_2+a2_3){i=3;}
+        if(a1_2 < (total-remain)%250 < a1_2+a2_3){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -119,7 +119,7 @@
             });
         infowindow.open(map);
         var i=4;
-        if(a1_2+a2_3 < (total-15)%250 < a1_2+a2_3+a3_4){i=5;}
+        if(a1_2+a2_3 < (total-remain)%250 < a1_2+a2_3+a3_4){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -127,7 +127,7 @@
             });
         infowindow.open(map);
         var i=6;
-        if(a1_2+a2_3+a3_4(total-15)%250< 250){i=7;}
+        if(a1_2+a2_3+a3_4(total-remain)%250< 250){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
