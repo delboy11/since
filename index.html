@@ -127,7 +127,7 @@
             });
         infowindow.open(map);
         var i=6;
-        if(a1_2+a2_3+a3_4 <(total-remain)%170 && (total-remain)%170 <= 170){i=7;}
+        if(a1_2+a2_3+a3_4 <(total-remain)%170 && (total-remain)%170 < 170 || (total-remain)%170==0 ){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
