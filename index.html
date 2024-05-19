@@ -56,6 +56,15 @@
                 title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시 됨
             });
         }
+
+        function zoomIn(){
+            map.setLevel(map.getLevel() - 1);
+        }
+        
+        // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+        function zoomOut() {
+            map.setLevel(map.getLevel() + 1);
+        }
         
         function clock(){
         var d= new Date();
