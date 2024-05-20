@@ -105,38 +105,38 @@
         var iwPositioncontent = [
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<div style="font-size:30px;width:200px; height:40px;">1번 남은시간 '+(170-(total-remain)%170)+'</div>'
+                    content: '<div style="font-size:30px;width:250px; height:50px;">1번 남은시간: '+(170-(total-remain)%170)+'</div>'
                     
                 },
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+ (getPlus(1,A)-(total-remain)%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;background-color:#00ff00;">1번 바뀌었습니다.'+ (getPlus(1,A)-(total-remain)%170)+'</div>'
                     
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">2번 남은시간</font></div>'+(170-(total-remain-getPlus(2,A))%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;">2번 남은시간: '+(170-(total-remain-getPlus(2,A))%170)+'</div>'
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.074604),
-                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">2번 바뀌었습니다. </font></div>'+(getPlus(3,A)-(total-remain)%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;background-color:#00ff00;">2번 바뀌었습니다.'+(getPlus(3,A)-(total-remain)%170)+'</div>'
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">3번 남은시간</font></div>'+(170-(total-remain-getPlus(4,A))%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;">3번 남은시간'+(170-(total-remain-getPlus(4,A))%170)+'</div>'
                 },
                 {
                     position: new kakao.maps.LatLng(37.194740, 127.074544),
-                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">3번 바뀌었습니다. </font></div>'+(getPlus(5,A)-(total-remain)%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;background-color:#00ff00;">3번 바뀌었습니다.'+(getPlus(5,A)-(total-remain)%170)+'</div>'
                 },
                 
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style=" width:200px; height:40px;">4번 남은시간</font></div>'+(170-(total-remain-getPlus(6,A))%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;">4번 남은시간'+(170-(total-remain-getPlus(6,A))%170)+'</div>'
                 },
                 {
                     position: new kakao.maps.LatLng(37.195010, 127.075264),
-                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">4번 바뀌었습니다. </font></div>'+(getPlus(7,A)-(total-remain)%170)
+                    content: '<div style="font-size:30px;width:250px; height:50px;background-color:#00ff00;">4번 바뀌었습니다.'+(getPlus(7,A)-(total-remain)%170)+'</div>'
                 }
         ]; 
         
