@@ -99,8 +99,9 @@
         var Ac = 170;
         var remain = 35;
         var A = [23,25,27,19,27,12,27,10]
-        var B_remain = 0;
-        var B = [0]
+        var Bc = 170;
+        var B_remain = 154;
+        var B = [25,11,25,13,19,77]
 
         function getPlus(con,arr){
         var k=0;
@@ -132,7 +133,7 @@
                 },
                 {   //3
                     position: new kakao.maps.LatLng(37.194730, 127.074450),
-                    content: '<div style="font-size:30px;width:300px; height:50px;">3번 남은시간'+(Ac-(total-remain-getPlus(4,A))%Ac)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;">3번 남은시간:'+(Ac-(total-remain-getPlus(4,A))%Ac)+'</div>'
                 },
                 {   //3_
                     position: new kakao.maps.LatLng(37.194730, 127.074450),
@@ -141,7 +142,7 @@
                 
                 {   //4
                     position: new kakao.maps.LatLng(37.195010, 127.075300),
-                    content: '<div style="font-size:30px;width:300px; height:50px;">4번 남은시간'+(Ac-(total-remain-getPlus(6,A))%Ac)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;">4번 남은시간:'+(Ac-(total-remain-getPlus(6,A))%Ac)+'</div>'
                 },
                 {   //4_
                     position: new kakao.maps.LatLng(37.195010, 127.075300),
@@ -153,35 +154,36 @@
         var jara =[
                 {   //1
                     position: new kakao.maps.LatLng(37.192758, 127.080445),
-                    content: '<div style="font-size:30px;width:300px; height:50px;">1번 남은시간'+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;">1번 남은시간: '+(Bc-(total-remain)%Bc)+'</div>'
                 },
                 {   //1_
                     position: new kakao.maps.LatLng(37.192758, 127.080445),
-                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">1번 바뀌었습니다.'+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">1번 바뀌었습니다.'+ (getPlus(1,B)-(total-B_remain)%Bc)+'</div>'
                 },
                 {   //2
                     position: new kakao.maps.LatLng(37.192166, 127.080356),
-                    content: '<div style="font-size:30px;width:300px; height:50px;">2번 남은시간: '+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;">2번 남은시간: '+(Bc-(total-remain-getPlus(2,B))%Bc)+'</div>'
                 },
                 {   //2_
                     position: new kakao.maps.LatLng(37.192166, 127.080356),
-                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">2번 바뀌었습니다.'+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">2번 바뀌었습니다.'+(getPlus(3,B)-(total-B_remain)%Bc)+'</div>'
                 },
                 {   //3
                     position: new kakao.maps.LatLng(37.192531, 127.079886),
-                    content: '<div style="font-size:30px;width:300px; height:50px;">3번 남은시간'+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;">3번 남은시간:'+(Bc-(total-remain-getPlus(4,B))%Bc)+'</div>'
                 },
                 {   //3_
                     position: new kakao.maps.LatLng(37.192531, 127.079886),
-                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">3번 바뀌었습니다.'+(0)+'</div>'
+                    content: '<div style="font-size:30px;width:300px; height:50px;background-color:#00ff00;">3번 바뀌었습니다.'+(getPlus(5,B)-(total-B_remain)%Bc)+'</div>'
                 }
 
         ];
         
 
+        // 나상 사거리
         // 인포윈도우를 생성합니다
         var i=0;
-        if(0 <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(1,A)){i=1;}
+        if(0 <= (total-B_remain)%Bc && (total-B_remain)%Bc <= getPlus(1,A)){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -189,7 +191,7 @@
             });
         infowindow.open(map);
         var i=2;
-        if(getPlus(2,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(3,A)){i=3;}
+        if(getPlus(2,B) <= (total-B_remain)%Bc && (total-B_remain)%Bc <= getPlus(3,A)){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -197,7 +199,7 @@
             });
         infowindow.open(map);
         var i=4;
-        if(getPlus(4,A) <= (total-remain)%Ac  && (total-remain)%Ac <= getPlus(5,A)){i=5;}
+        if(getPlus(4,B) <= (total-B_remain)%Bc  && (total-B_remain)%Bc <= getPlus(5,A)){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -205,7 +207,7 @@
             });
         infowindow.open(map);
         var i=6;
-        if(getPlus(6,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(7,A)){i=7;}
+        if(getPlus(6,B) <= (total-B_remain)%Bc && (total-B_remain)%Bc <= getPlus(7,A)){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
@@ -213,11 +215,12 @@
             });
         infowindow.open(map);
 
-        //절단
+        //-----------------------------------------------------------------------------------
+        //자라뫼 근처
 
 
         var i=0;
-        //if
+        if(0 <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(1,A)){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
@@ -225,6 +228,7 @@
             });
         infowindow.open(map);
         var i=2;
+        if(getPlus(2,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(3,A)){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
@@ -232,6 +236,7 @@
             });
         infowindow.open(map);
         var i=4;
+        if(getPlus(4,A) <= (total-remain)%Ac  && (total-remain)%Ac <= getPlus(5,A)){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
