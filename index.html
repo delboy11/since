@@ -105,12 +105,12 @@
         var iwPositioncontent = [
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="width:200px; height:40px;">1번 남은시간 </font></div>'+(170-(total-remain)%170)
+                    content: '<div style="font-size:30px;width:200px; height:40px;">1번 남은시간 '+(170-(total-remain)%170)'+</div>'
                     
                 },
                 {  
                     position: new kakao.maps.LatLng(37.194730, 127.075200), //인포윈도우 표시 위치입니다
-                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+ <font size=5>(getPlus(1,A)-(total-remain)%170)</font>
+                    content: '<font size = 5><div style="background-color:#00ff00; width:200px; height:40px;">1번 바뀌었습니다.</font></div>'+ (getPlus(1,A)-(total-remain)%170)
                     
                 },
                 {
