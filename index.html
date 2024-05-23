@@ -12,7 +12,9 @@
 </head>
 
 <body>
-    
+    <p id="display"></p>
+    <p id="display1"></p>
+
     <style>
         .custom_zoomcontrol span {display:block;width:36px;height:40px;text-align:center;cursor:pointer;}     
         .custom_zoomcontrol span img {width:15px;height:15px;padding:12px 0;border:none;}             
@@ -95,7 +97,8 @@
         function clock(){
         var d= new Date();
         var total=d.getHours()*3600+d.getMinutes()*60+d.getSeconds()
-        
+        document.getElementById("display").innerHTML = getMinutes()
+        document.getElementById("display1").innerHTML = getSeconds()
         var Ac = 170;
         var remain = 35;
         var A = [23,25,27,19,27,12,27,10]
