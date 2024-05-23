@@ -97,8 +97,8 @@
         function clock(){
         var d= new Date();
         var total=d.getHours()*3600+d.getMinutes()*60+d.getSeconds()
-        document.getElementById("display").innerHTML = getMinutes()
-        document.getElementById("display1").innerHTML = getSeconds()
+        document.getElementById("display").innerHTML = d.getMinutes()
+        document.getElementById("display1").innerHTML = d.getSeconds()
         var Ac = 170;
         var remain = 35;
         var A = [23,25,27,19,27,12,27,10]
