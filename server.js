@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.listen(8080,function(){
-    응답.send('ㅎㅇ')
+    console.log('gd')
 })
 
 app.get('/sexy',function(요청 ,응답){
