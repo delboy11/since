@@ -10,6 +10,7 @@ app.get('/sexy',function(요청 ,응답){
 })
 
 app.get('/',function(요청 ,응답){
-    응답.sendFile(__dirname + '/index.html')
     console.log('ㅎㅇ')
+    응답.sendFile(__dirname + '/index.html')
+    
 })
