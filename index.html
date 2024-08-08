@@ -41,7 +41,7 @@
 
         var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
-        disableAutoPan: true
+        
         var positions = [
             {
                 title: '신호등 1번',
@@ -82,6 +82,7 @@
                 map: map, // 마커를 표시할 지도
                 position: positions[i].latlng, // 마커를 표시할 위치
                 title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시 됨
+                disableAutoPan: true
             });
         }
 
@@ -190,7 +191,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         var i=2;
@@ -198,7 +199,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         var i=4;
@@ -206,7 +207,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         var i=6;
@@ -214,7 +215,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
 
@@ -227,7 +228,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         var i=2;
@@ -235,7 +236,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         var i=4;
@@ -243,7 +244,7 @@
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
                 content: jara[i].content
-                
+                disableAutoPan: true
             });
         infowindow.open(map);
         
