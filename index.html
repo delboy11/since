@@ -188,7 +188,7 @@
         // 인포윈도우를 생성합니다
         var i=0;
         if(0 <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(1,A)){i=1;}
-        var infowindow[1] = new kakao.maps.InfoWindow({
+        var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content,
                 disableAutoPan: true
@@ -196,7 +196,7 @@
         infowindow.open(map);
         var i=2;
         if(getPlus(2,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(3,A)){i=3;}
-        var infowindow[2] = new kakao.maps.InfoWindow({
+        var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content,
                 disableAutoPan: true
@@ -204,7 +204,7 @@
         infowindow.open(map);
         var i=4;
         if(getPlus(4,A) <= (total-remain)%Ac  && (total-remain)%Ac <= getPlus(5,A)){i=5;}
-        var infowindow[3] = new kakao.maps.InfoWindow({
+        var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content,
                 disableAutoPan: true
@@ -212,7 +212,7 @@
         infowindow.open(map);
         var i=6;
         if(getPlus(6,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(7,A)){i=7;}
-        var infowindow[4] = new kakao.maps.InfoWindow({
+        var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
                 content: iwPositioncontent[i].content,
                 disableAutoPan: true
