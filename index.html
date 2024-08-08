@@ -82,7 +82,7 @@
                 map: map, // 마커를 표시할 지도
                 position: positions[i].latlng, // 마커를 표시할 위치
                 title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시 됨
-                
+                disableAutoPan: true
             });
         }
 
@@ -190,7 +190,7 @@
         if(0 <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(1,A)){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
-                content: iwPositioncontent[i].content
+                content: iwPositioncontent[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -198,7 +198,7 @@
         if(getPlus(2,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(3,A)){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
-                content: iwPositioncontent[i].content
+                content: iwPositioncontent[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -206,7 +206,7 @@
         if(getPlus(4,A) <= (total-remain)%Ac  && (total-remain)%Ac <= getPlus(5,A)){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
-                content: iwPositioncontent[i].content
+                content: iwPositioncontent[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -214,7 +214,7 @@
         if(getPlus(6,A) <= (total-remain)%Ac && (total-remain)%Ac <= getPlus(7,A)){i=7;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: iwPositioncontent[i].position,
-                content: iwPositioncontent[i].content
+                content: iwPositioncontent[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -227,7 +227,7 @@
         if(0 <= (total-B_remain)%Bc && (total-B_remain)%Bc <= getPlus(1,B)){i=1;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
-                content: jara[i].content
+                content: jara[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -235,7 +235,7 @@
         if(getPlus(2,B) <= (total-B_remain)%Bc && (total-B_remain)%Bc <= getPlus(3,B)){i=3;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
-                content: jara[i].content
+                content: jara[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
@@ -243,7 +243,7 @@
         if(getPlus(4,B) <= (total-B_remain)%Bc  && (total-B_remain)%Bc <= getPlus(5,B)){i=5;}
         var infowindow = new kakao.maps.InfoWindow({
                 position: jara[i].position,
-                content: jara[i].content
+                content: jara[i].content,
                 disableAutoPan: true
             });
         infowindow.open(map);
