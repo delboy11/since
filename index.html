@@ -41,7 +41,7 @@
 
         var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
-
+        disableAutoPan: true
         var positions = [
             {
                 title: '신호등 1번',
@@ -250,7 +250,7 @@
             
          
     }
-    setInterval(clock,1000000);
+    setInterval(clock,100);
         // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
     
         
